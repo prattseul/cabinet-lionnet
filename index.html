@@ -83,22 +83,74 @@
       <div class="contact-copy">
         <h2>Parlons de<br>votre situation.</h2>
 
-        <div class="contact-details">
-          <div>
-            <span>Téléphone</span>
-            <a href="tel:+33613711966">06 13 71 19 66</a>
-          </div>
-          <div>
-            <span>E-mail</span>
-            <a href="mailto:sarah.lionnet@ls-avocat.com">sarah.lionnet@ls-avocat.com</a>
-          </div>
-          <div>
-            <span>Cabinet</span>
-            <address>1 Place des Saisons<br>92400 Courbevoie</address>
-          </div>
-          <div>
-            <span>Barreau</span>
-            <p>Hauts-de-Seine<br>Toque 1733</p>
+        <div class="contact-layout">
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/REMPLACER_ICI"
+            method="POST"
+          >
+            <div class="field-row">
+              <div class="field">
+                <label for="nom">Nom</label>
+                <input id="nom" name="nom" type="text" autocomplete="name" required>
+              </div>
+
+              <div class="field">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="telephone">Téléphone <span>(facultatif)</span></label>
+                <input id="telephone" name="telephone" type="tel" autocomplete="tel">
+              </div>
+
+              <div class="field">
+                <label for="objet">Objet</label>
+                <input id="objet" name="objet" type="text" required>
+              </div>
+            </div>
+
+            <div class="field field-message">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <input type="hidden" name="_subject" value="Nouveau message depuis le site de Sarah Lionnet">
+
+            <label class="consent">
+              <input type="checkbox" name="consentement" value="oui" required>
+              <span>
+                J’accepte que les informations transmises soient utilisées afin de répondre à ma demande.
+                Merci de ne pas communiquer d’informations sensibles ou confidentielles via ce formulaire.
+              </span>
+            </label>
+
+            <div class="form-actions">
+              <button type="submit">Envoyer le message <span>↗</span></button>
+              <p>Les champs marqués comme obligatoires sont nécessaires au traitement de votre demande.</p>
+            </div>
+          </form>
+
+          <div class="contact-details">
+            <div>
+              <span>Téléphone</span>
+              <a href="tel:+33613711966">06 13 71 19 66</a>
+            </div>
+            <div>
+              <span>E-mail</span>
+              <a href="mailto:sarah.lionnet@ls-avocat.com">sarah.lionnet@ls-avocat.com</a>
+            </div>
+            <div>
+              <span>Cabinet</span>
+              <address>1 Place des Saisons<br>92400 Courbevoie</address>
+            </div>
+            <div>
+              <span>Barreau</span>
+              <p>Hauts-de-Seine<br>Toque 1733</p>
+            </div>
           </div>
         </div>
       </div>
