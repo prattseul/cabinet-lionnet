@@ -205,13 +205,118 @@ button{font:inherit}
   font-size:clamp(3.2rem,6.6vw,6.8rem);
   line-height:.92;
 }
-.contact-details{
+.contact-layout{
   margin-top:4rem;
+  display:grid;
+  grid-template-columns:minmax(0,1.45fr) minmax(240px,.55fr);
+  gap:5rem;
+  align-items:start;
+}
+
+.contact-form{
+  border-top:1px solid var(--line);
+  padding-top:1.3rem;
+}
+
+.field-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.4rem 2rem;
+}
+
+.field{
+  margin-bottom:1.5rem;
+}
+
+.field label{
+  display:block;
+  margin-bottom:.55rem;
+  font-size:.67rem;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:var(--muted);
+}
+
+.field label span{
+  text-transform:none;
+  letter-spacing:0;
+}
+
+.field input,
+.field textarea{
+  width:100%;
+  border:0;
+  border-bottom:1px solid var(--line);
+  background:transparent;
+  border-radius:0;
+  padding:.35rem 0 .75rem;
+  color:var(--ink);
+  font:inherit;
+  font-size:.95rem;
+  outline:none;
+  transition:border-color .2s ease;
+}
+
+.field textarea{
+  resize:vertical;
+  min-height:140px;
+}
+
+.field input:focus,
+.field textarea:focus{
+  border-color:var(--ink);
+}
+
+.consent{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:.75rem;
+  align-items:start;
+  margin-top:.5rem;
+  color:var(--muted);
+  font-size:.75rem;
+  line-height:1.55;
+}
+
+.consent input{
+  margin-top:.2rem;
+}
+
+.form-actions{
+  margin-top:1.7rem;
+  display:flex;
+  gap:1.5rem;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.form-actions button{
+  border:0;
+  background:var(--ink);
+  color:var(--paper);
+  padding:.95rem 1.15rem;
+  font:inherit;
+  font-size:.78rem;
+  cursor:pointer;
+  transition:opacity .2s ease;
+}
+
+.form-actions button:hover{opacity:.72}
+
+.form-actions p{
+  margin:0;
+  max-width:330px;
+  color:var(--muted);
+  font-size:.68rem;
+  line-height:1.5;
+}
+
+.contact-details{
   padding-top:1.2rem;
   border-top:1px solid var(--line);
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:2.2rem 3.5rem;
+  grid-template-columns:1fr;
+  gap:2rem;
 }
 .contact-details span{
   display:block;
@@ -305,6 +410,9 @@ button{font:inherit}
     gap:1.3rem;
   }
   .section{padding-top:76px;padding-bottom:76px}
+  .contact-layout{grid-template-columns:1fr;gap:3rem}
+  .field-row{grid-template-columns:1fr}
+  .form-actions{align-items:flex-start;flex-direction:column}
   .contact-details{grid-template-columns:1fr}
   .site-footer{flex-direction:column}
 }
